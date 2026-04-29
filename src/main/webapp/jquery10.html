@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		width: 200px; height: 200px;
+		background-color    : orange;
+		position            : relative
+	}
+</style>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script>
+	// 플러그인 없이 사용할 경우 linear, swing 2개만 가능 
+	let eases = [
+		'linear',        'swing',
+		'easeInQuad',    'easeOutQuad',  'easeInOutQuad',
+		'easeInCubic',   'easeOutQuart', 'easeInOutQuint',
+		'easeInExpo',    'easeOutCirc',
+		'easeOutBounce', 'easeInBounce',
+		'easeInBack',    'easeOutBack',  'easeInElastic'
+		]
+
+	$( function() { 
+		let tag = '';
+		$.each(eases, function( index, opt ) {
+			console.log(opt)
+			 // 자바스크립트에 문자열 안에  변수를 바로 넣는방식 ` 백킷 tab위에있는키를 앞뒤로 붙이고 변수안에 넣어준다 `<option>${opt}</option>`
+			tag += `<option>${opt}</option>` 
+		})
+			$('select').html(tag)
+		
+		$('button').click( function() {
+			let easing = $('option:selected').html()
+			$('div').animate({
+				left : '400'
+			}, 2000,easing)
+			.animate({
+				left : '0'
+			}, 2000,easing)
+		})
+	} )
+</script>
+</head>
+<body>
+   <select></select>
+   <button>MOVE</button>
+   <div></div>
+</body>
+</html>

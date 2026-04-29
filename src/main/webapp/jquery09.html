@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img {
+		width:200px; height: 200px;
+		position : relative; 
+	}
+</style>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+	$( function() {
+		$('img').animate({ left : '+=100' }, 1000); // 1초 동안 100 번 실행
+		$('img').animate({ width : '+=100' }, 1000); // 넓이도 100만큼
+		$('img').animate({ height : '+=100' }, 1000); // 넓이도 100만큼
+		
+		// 5초 후에 사라짐
+		setTimeout(function() {		
+			$('img').clearQueue(); // 애니매이션 정보가 담긴 메모리(큐)를 제거해준다
+			$('img').hide();
+		},	5*1000)
+	} )
+</script>
+</head>
+<body>
+	<img src = "img/Koala.jpg"/>
+</body>
+</html>

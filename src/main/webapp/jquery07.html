@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+	$( function() {
+		/*
+		$('h1').filter( ':even' ).css({
+			'background-color' : 'black',
+			'color'            : 'white'
+		})
+		*/
+		$('h1').filter( function( index ) { // h1 을 선택하여 필터를 거는데 3으로 나눳을때 0이면실행하여라
+			return index % 3 == 0
+		}).css( {
+			background : 'black',
+			color      : 'white'
+		})
+		       
+		$('h1').eq(0).css('color','cyan') //  첫번째 줄 //.equals 의 약자 h1의 첫번째 줄의 색을 cyan으로 만들어라
+		$('h1').eq(-1).css('color','cyan') // 마지막 줄
+	} )
+</script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+    <h1>Header-3</h1>
+    <h1>Header-4</h1>
+    <h1>Header-5</h1>
+    <h1>Header-6</h1>
+    <h1>Header-7</h1>
+</body>
+</html>
