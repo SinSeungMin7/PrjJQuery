@@ -1,0 +1,177 @@
+<body>
+ <table>
+    <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+    <tr><td>강호동</td><td>AB형</td><td>해운대구</td></tr>
+    <tr><td>서장훈</td><td>A형</td><td>동래구</td></tr>
+    <tr><td>박세리</td><td>B형</td><td>동래구</td></tr>
+    <tr><td>김연아</td><td>A형</td><td>동래구</td></tr>
+    <tr><td>박찬호</td><td>A형</td><td>동래구</td></tr>  
+  </table>
+</body>
+</html>
+
+-----------------------------------------
+  <form id="frm">
+    <input type="text" id="name" />
+    <input type="text" id="name2" />
+    <input type="password"  />
+    <input type="radio"  />
+    <input type="checkbox"  />
+    <input type="file"  />
+  
+  </form>
+----------------------------------------
+jquery05.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+</style>
+<title>Insert title here</title>
+<style>
+   .high-light-0 { background-color:red;  }
+   .high-light-1 { background-color:orange;  }
+   .high-light-2 { background-color:yellow;  }
+   .high-light-3 { background-color:green;  }
+   .high-light-4 { background-color:blue;  }
+   .high-light-5 { background-color:navy;  }
+   .high-light-6 { background-color:purple;  }
+</style>
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script>
+  
+  $( function() {
+	  $('h1').each( function( index, item ) {
+		  console.log(item)
+	  }  );
+		
+  })
+
+</script>
+
+</head>
+<body>
+    <h1>item - 0</h1>
+    <h1>item - 1</h1>
+    <h1>item - 2</h1>
+    <h1>item - 3</h1>
+    <h1>item - 4</h1>
+    <h1>item - 5</h1>
+    <h1>item - 6</h1>
+</body>
+</html>
+
+----------------------------------------
+jquery06.html
+<body>
+<button id="btnslider">Slide toggle</button>
+<p>그것을 피어나기 품었기 대중을 찾아 별과 열락의 듣는다. 전인 청춘의 청춘이 온갖 새 있으랴? 하는 따뜻한 얼음에 인생을 것이다.보라, 구하지 온갖 것이다. 만물은 때까지 보내는 있으며, 불러 꽃이 품고 불어 것이다. 만물은 투명하되 얼마나 쓸쓸한 부패뿐이다. 무엇을 품으며, 거선의 이상이 돋고, 사막이다. 그들에게 만천하의 지혜는 따뜻한 그들은 피가 속에서 착목한는 것이다. 사람은 위하여, 보내는 넣는 희망의 인간에 청춘의 것이다. 어디 보이는 우리 거선의 인간에 기관과 이것이다. 길을 안고, 인도하겠다는 끓는 이는 기관과 이상은 그것은 보배를 사막이다.
+<br><br>
+목숨이 넣는 인류의 청춘 끝에 열매를 찾아다녀도, 가는 봄바람이다. 할지니, 인간이 만물은 방황하여도, 힘있다. 인간의 가슴에 사람은 이상이 사막이다. 낙원을 가슴에 풀이 거친 아름다우냐? 실현에 구할 품고 공자는 것이다. 인간의 인생에 능히 수 기쁘며, 없으면, 그것을 밥을 관현악이며, 운다. 못하다 어디 때까지 되는 하여도 때문이다. 이상은 사람은 기관과 쓸쓸한 관현악이며, 가는 평화스러운 인간에 장식하는 끓는다. 있는 불어 아름답고 사막이다. 작고 보이는 않는 귀는 뜨고, 곳으로 웅대한 노래하며 사막이다.
+<br><br>
+곧 황금시대를 옷을 보라. 열매를 가장 인간은 위하여서, 이것은 꾸며 뛰노는 부패뿐이다. 위하여 피가 그들의 온갖 굳세게 옷을 것이다. 이상의 기관과 사라지지 얼마나 불러 얼음에 심장은 있으랴? 창공에 그러므로 이상이 위하여서 것은 발휘하기 청춘의 그리하였는가? 싹이 얼음 영락과 풀이 피가 소담스러운 때문이다. 내는 인생에 불어 칼이다. 것이 보내는 석가는 인간의 만천하의 꽃이 아름다우냐? 때까지 풍부하게 끓는 발휘하기 것이다. 관현악이며, 예가 발휘하기 교향악이다.
+</p>
+</body>
+----------------------------------------
+jquery07.html
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+    <h1>Header-3</h1>
+    <h1>Header-4</h1>
+    <h1>Header-5</h1>
+    <h1>Header-6</h1>
+    <h1>Header-7</h1>
+</body>
+
+----------------------------------------
+jquery10.html
+
+=======================================================================================
+<script src="https://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+=======================================================================================
+Quadratic: easeInQuad, easeOutQuad, easeInOutQuad. 
+Cubic/Quart/Quint: easeInCubic, easeOutQuart, easeInOutQuint, etc. 
+Exponential/Circular: easeInExpo, easeOutCirc. 
+
+Specialty Effects:
+easeOutBounce: Adds a bouncing effect at the end.
+easeInBack / easeOutBack: Overshoots the start or end for a "spring" effect.
+easeInElastic: Mimics the motion of a rubber band. 
+=========================================================================================
+
+<body>
+   <select>
+     <option>linear</option>
+     <option>swing</option>
+     <option>easeOutBounce</option>
+   </select>
+   <button>MOVE</button>
+   <div></div>
+</body>
+
+----------------------------------------
+jquery11.html
+<body>
+   <ul id="inner-fade">
+     <li><img src="img/Chrysanthemum.jpg" /></li>
+     <li><img src="img/Desert.jpg" /></li>
+     <li><img src="img/Hydrangeas.jpg" /></li>
+     <li><img src="img/Jellyfish.jpg" /></li>
+     <li><img src="img/Koala.jpg" /></li>
+     <li><img src="img/Penguins.jpg" /></li>
+     <li><img src="img/Lighthouse.jpg" /></li>
+     <li><img src="img/Tulips.jpg" /></li>
+   </ul>
+</body>
+
+----------------------------------------
+jquery13.html
+
+<body>
+   <button>Click Me Show</button>
+   <button>Click Me Hide</button>
+   <table>
+     <tr>
+	    <td>번호</td>
+	    <td>종목</td>
+	    <td>수량</td>
+	 </tr>
+     <tr>
+	    <td>1</td>
+	    <td>사과</td>
+	    <td>100</td>
+	 </tr>
+	 <tr>
+	    <td>2</td>
+	    <td>바나나</td>
+	    <td>200</td>
+	 </tr>
+	 <tr>
+	    <td>3</td>
+	    <td>수박</td>
+	    <td>150</td>
+	 </tr>
+	  <tr>
+	    <td>4</td>
+	    <td>딸기</td>
+	    <td>300</td>
+	 </tr>
+   </table>
+   
+</body>
+
+
+
+
+
+
+
+
+
+
+

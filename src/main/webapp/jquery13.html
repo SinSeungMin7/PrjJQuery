@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+	$( function() {
+		/*
+		// odd : 홀수번째, Even: 짝수번째
+	//	$('tr:odd').css('backgroundColor', 'black').css('color',           'white')
+		$('tr:odd').css( {
+			'backgroundColor':'black',
+			'color':'white'
+			} )
+		$('tr:even').css( {
+			'backgroundColor':'yellow',
+			'color':'brown'
+			} )
+		$('tr:first').css( {
+			'backgroundColor':'silver',
+			'color':'black'		
+			} ) 
+			/*
+		$('button').on('click', function( e ) { // !! 중요문법 
+			                           // e : event의 약자
+		//	console.log( e )
+			const btnEl = event.target   // 클릭한 대상(button)
+			alert( $(btnEl).html() )        //btn.innerHTML
+			if( $(btnEl).html() == 'Click Me Show' )
+				$('table').show()
+			if( $(btnEl).html() == 'Click Me Hide' )
+				$('table').hide()
+		})	
+		*/
+		$('button').on('click', function(  ) { // !! 중요문법
+			console.log( this ) // event.target
+			if( $(this).html() == 'Click Me Show' )
+				$('table').show()
+			if( $(this).html() == 'Click Me Hide' )
+				$('table').hide()
+			})
+			
+			/*
+			$('table tr').mouseover(function() { // tr에다가 마우스를 올리면? 이라는 뜻
+			//	console.dir(this) 
+				$(this).css({ //스타일을 입히기 위한작업 css 는 jquery, this는 자바스크립트 함수 이기떄문에 $(this) 넣어준다
+					backgroundColor : 'yellow',
+					color           : 'violet'
+				})
+			})
+			.mouseout(function() {
+				$(this).css({ //스타일을 입히기 위한작업 css 는 jquery, this는 자바스크립트 함수 이기떄문에 $(this) 넣어준다
+					backgroundColor : 'white',
+					color           : 'black'
+				})
+			})
+			*/
+			$('table tr').on({ // table > tr : 테이블의 자식 tr 이지만 html에서는 자식은 tbody 가 자식으로 tr 은 손자로 나온다 그래서 작동하지않는다
+				mouseover : function ( ) {
+					$(this).css({
+						backgroundColor : 'cyan',
+						color           : 'white'
+					})
+				},
+				mouseout : function ( ) {
+					$(this).css({
+						backgroundColor : 'white',
+						color           : 'black'
+					})
+				}
+			})
+			
+	} )
+</script>
+</head>
+<body>
+   <button>Click Me Show</button>
+   <button>Click Me Hide</button>
+   <table>
+     <tr>
+	    <td>번호</td>
+	    <td>종목</td>
+	    <td>수량</td>
+	 </tr>
+     <tr>
+	    <td>1</td>
+	    <td>사과</td>
+	    <td>100</td>
+	 </tr>
+	 <tr>
+	    <td>2</td>
+	    <td>바나나</td>
+	    <td>200</td>
+	 </tr>
+	 <tr>
+	    <td>3</td>
+	    <td>수박</td>
+	    <td>150</td>
+	 </tr>
+	  <tr>
+	    <td>4</td>
+	    <td>딸기</td>
+	    <td>300</td>
+	 </tr>
+   </table>
+   
+</body>
+
+
+</html>
